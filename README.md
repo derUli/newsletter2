@@ -60,4 +60,4 @@ described in a section below.
 
 ### Mail Queue
 
-**newsletter2** will use the **mail_queue** module if it is installed
+**newsletter2** will use the **mail_queue** module if it is installed.
