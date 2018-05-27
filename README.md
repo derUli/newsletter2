@@ -1,7 +1,7 @@
 
 # newsletter2
 
-**newsletter2** is a **complete reimplementation**  of the newsletter module for UliCMS. It runs on **UliCMS 2018.3.3 or later**  and it is **GDPR compliant**  . newsletter is **backwards compatible**  to the old newsletter modul and may be used as a drop-in replacement
+**newsletter2** is a **complete reimplementation**  of the newsletter module for UliCMS. It runs on **UliCMS 2018.3.3 or later**  and it is **GDPR compliant** . **newsletter2**  is **backwards compatible**  to the old newsletter modul and may be used as a drop-in replacement
 
 ## Features
 
