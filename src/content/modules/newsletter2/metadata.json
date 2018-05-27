@@ -1,0 +1,42 @@
+{
+	"version": "1.0",
+	"source": "extend",
+	"embed": true,
+	"shy": false,
+	"main_class": "NewsletterController",
+	"controllers": {
+		"NewsletterController": "controllers/NewsletterController.php"
+	},
+	"controller_function_permissions": {
+		"NewsletterController::saveTemplatePost": "newsletter_edit_template",
+		"NewsletterController::sendNewsletterPost": "newsletter_write",
+		"NewsletterController::subscriberActionPost": "newsletter_subscribers_change",
+		"NewsletterController::addSubscribersPost": "newsletter_subscribers_add"
+	},
+	"objects": {
+		"\\Newsletter\\Newsletter": "objects/Newsletter",
+		"\\Newsletter\\Subscriber": "objects/Subscriber",
+		"\\Newsletter\\SubscriberList": "objects/SubscriberList"
+	},
+	"actions": {
+		"edit_newsletter_template": "templates/edit_newsletter_template.php",
+		"write_newsletter": "templates/write_newsletter.php",
+		"newsletter_subscribers": "templates/newsletter_subscribers.php",
+		"newsletter_subscribers_add": "templates/newsletter_subscribers_add.php"
+	},
+	"action_permissions": {
+		"edit_newsletter_template": "newsletter_edit_template",
+		"write_newsletter": "newsletter_write",
+		"newsletter_subscribers": "newsletter_subscribers_list",
+		"newsletter_subscribers_add": "newsletter_subscribers_add"
+	},
+	"custom_acl": [
+		"newsletter",
+		"newsletter_edit_template",
+		"newsletter_write",
+		"newsletter_subscribers_list",
+		"newsletter_subscribers_change",
+		"newsletter_subscribers_add"
+	],
+	"admin_permission": "newsletter"
+}
