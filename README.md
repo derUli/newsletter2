@@ -1,7 +1,7 @@
 
 # newsletter2
 
-**newsletter2** is a **complete reimplementation**  of the newsletter module for UliCMS. It runs on **UliCMS 2018.3.3 or later**  and it is **GDPR compliant** . **newsletter2**  is **backwards compatible**  to the old newsletter modul and may be used as a drop-in replacement
+**newsletter2** is a **complete reimplementation**  of the newsletter module for UliCMS. It runs on **UliCMS 2018.3.3 or later**  and it is **GDPR compliant**  . newsletter is **backwards compatible**  to the old newsletter modul and may be used as a drop-in replacement
 
 ## Features
 
@@ -39,7 +39,7 @@ values ('module/newsletter2', '001.sql', current_timestamp());
 
 4. Click **Edit Template**  .
 
-5. Set a default title and a basic mail template. The mail template should include a mail footer with an unsubscribe link and a mail imprint. You may use placeholders in your newsletter template. The available placeholders are described in a section below.
+5. Set a default title and a basic mail template. The mail template should include a mail footer with an **unsubscribe link**  and a **mail imprint.**  You may use **placeholders**  in your newsletter template. The available placeholders are described in a section below.
 
 ### Permissions
 
