@@ -39,7 +39,7 @@ values ('module/newsletter2', '001.sql', current_timestamp());
 
 4. Click **Edit Template**  .
 
-5. Set a default title and a basic mail template. The mail template should include a mail footer with an **unsubscribe link**  and a **mail imprint.**  You may use **placeholders**  in your newsletter template. The available placeholders are described in a section below.
+5. Set a default title and a basic mail template. The mail template should include a mail footer with an unsubscribe link and a mail imprint. You may use placeholders in your newsletter template. The available placeholders are described in a section below.
 
 ### Permissions
 
@@ -51,4 +51,4 @@ values ('module/newsletter2', '001.sql', current_timestamp());
 
 ### Mail Queue
 
-**newsletter2**  will use the **mail_queue**  module if it is installed
+**newsletter2**  will use the **mail_queue**  module if it is installed.
