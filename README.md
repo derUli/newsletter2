@@ -48,7 +48,14 @@ values ('module/newsletter2', '001.sql', current_timestamp());
 
 ### Permissions
 
-[...]
+| Permission | Description |
+| --- | --- |
+| newsletter | Open the backend UI |
+| newsletter_edit_template | Edit newsletter template |
+| newsletter_write | Write a newsletter |
+| newsletter_subscribers_list | show newsletter subscribes |
+| newsletter_subscribers_change | edit newsletter subscribers |
+| newsletter_subscribers_add | add newsletter subscribers |
 
 ### Newsletter Placeholders
 
