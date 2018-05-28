@@ -59,7 +59,16 @@ values ('module/newsletter2', '001.sql', current_timestamp());
 
 ### Newsletter Placeholders
 
-[...]
+newsletter2 supports some placeholders which will be replaced when sending a newsletter.
+
+| Placeholder | Description |
+| --- | --- |
+| %newsletter_id% | number of the newsletter |
+| %title% | The title of the newsletter |
+| %date% | Current date in the configured date format |
+| %year% | The current year |
+| %month% | The current month |
+| %unsubscribe_link% | The url to unsubscribe newsletter |
 
 ### Mail Queue
 
