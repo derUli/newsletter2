@@ -5,7 +5,12 @@
 
 ## Features
 
-[...]
+* GDPR Compliant
+* Double Opt-In
+* Full html mail support
+* supports mail_queue
+* subscribers may be added and removed manually
+* backward compatible to the old newsletter module
 
 ## System Requirements
 
