@@ -27,7 +27,7 @@ if (StringHelper::isNullOrWhitespace($subscribers_filter_email)) {
     $subscribers = $subscriberList;
 } else {
     foreach ($subscriberList as $subscriber) {
-        if (startsWith($subscriber->getEmail(), $subscribers_filter_email)) {
+        if (startsWith(strtolower($subscriber->getEmail()), strtolower($subscribers_filter_email))) {
             $subscribers[] = $subscriber;
         }
     }
