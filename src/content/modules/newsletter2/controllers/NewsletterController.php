@@ -69,11 +69,7 @@ class NewsletterController extends Controller
             $body = str_ireplace("%month%", utf8_encode(strftime("%B")), $body);
             $body = str_ireplace("%date%", $date, $body);
             $body = str_ireplace("%title%", $title, $body);
-            
-            $base_url = ModuleHelper::getBaseUrl();
-            $body = str_ireplace('<img src="/', '<img src="' . $base_url, $body);
-            $body = str_ireplace("<img src='/", "<img src='" . $base_url, $body);
-            
+                        
             ViewBag::set("base_url", getBaseFolderURL());
             ViewBag::set("title", $title);
             ViewBag::set("body", $body);
