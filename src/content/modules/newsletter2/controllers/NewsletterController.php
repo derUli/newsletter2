@@ -70,6 +70,10 @@ class NewsletterController extends Controller
             $body = str_ireplace("%date%", $date, $body);
             $body = str_ireplace("%title%", $title, $body);
             
+            $base_url = ModuleHelper::getBaseUrl();
+            $body = str_ireplace('<img src="/', '<img src="' . $base_url, $body);
+            $body = str_ireplace("<img src='/", "<img src='" . $base_url, $body);
+            
             ViewBag::set("base_url", getBaseFolderURL());
             ViewBag::set("title", $title);
             ViewBag::set("body", $body);
@@ -169,8 +173,8 @@ class NewsletterController extends Controller
         ViewBag::set("homepage_title", $homepage_title);
         ViewBag::set("confirmation_link", $confirmationUrl);
         
-        $headers = "From: " . Settings::get("email")."\r\n";
-		$headers .= "Content-Type: text/plain; charset=utf-8";
+        $headers = "From: " . Settings::get("email") . "\r\n";
+        $headers .= "Content-Type: text/plain; charset=utf-8";
         
         $language = getCurrentLanguage();
         
