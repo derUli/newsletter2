@@ -15,7 +15,7 @@
 ## System Requirements
 
 * UliCMS 2018.3.3 or later
-
+* absolutify 1.0 or later
 * mail_queue module (optional) (recommend)
 
 ## Installation instructions
@@ -32,7 +32,9 @@ insert into `{prefix}dbtrack`
 values ('module/newsletter2', '001.sql', current_timestamp());
 ```
 
-3. Install the **newsletter2**  module. Upload the package file **newsletter2-1.0.sin**  .
+3. Install the **absolutify** module.
+
+4. Install the **newsletter2** module. Upload the package file **newsletter2-1.0.sin**  .
 
 ## Configuration
 
