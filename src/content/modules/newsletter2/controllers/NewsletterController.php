@@ -69,7 +69,9 @@ class NewsletterController extends Controller
             $body = str_ireplace("%month%", utf8_encode(strftime("%B")), $body);
             $body = str_ireplace("%date%", $date, $body);
             $body = str_ireplace("%title%", $title, $body);
-                        
+            
+            $body = function_exists("absolutify") ? absolutify($body, ModuleHelper::getBaseUrl()) : $body;
+            
             ViewBag::set("base_url", getBaseFolderURL());
             ViewBag::set("title", $title);
             ViewBag::set("body", $body);

@@ -3,5 +3,6 @@
    "version" : "1.0",
    "description" : "Advanced Newsletter solution for UliCMS",
    "categories" : ["newsletter", "email", "marketing", "toools"],
-   "compatible_from" : "2018.3.3"
+   "compatible_from" : "2018.3.3",
+   "dependencies" : ["absolutify"]
 }
