@@ -172,7 +172,7 @@ class NewsletterController extends Controller
         ViewBag::set("confirmation_link", $confirmationUrl);
         
         $headers = "From: " . Settings::get("email") . "\r\n";
-        $headers .= "Content-Type: text/plain; charset=utf-8";
+        $headers .= "Content-Type: text/html; charset=utf-8";
         
         $language = getCurrentLanguage();
         

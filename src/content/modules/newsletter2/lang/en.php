@@ -5,7 +5,7 @@ add_translation("subscribe_newsletter", "Subscribe newsletter");
 add_translation("please_confirm_newsletter", "You will receive a confirmation mail in the next minutes. Click on the link in that mail to confirm newsletter subscription.");
 add_translation("newsletter_confirmation_subject", "Confirm Newsletter Subscription");
 add_translation("newsletter_confirmed", "You successfully confirmed the newsletter subscription. You may unsubscribe the newsletter any time by just cliking the unsubscribe link at the end of a newsletter mail.");
-add_translation("write_newsletter", "Newsletter schreiben");
+add_translation("write_newsletter", "Write Newsletter");
 add_translation("show_subscribers", "Show Subscribers");
 add_translation("edit_template", "Edit Template");
 add_translation("template", "Template");
