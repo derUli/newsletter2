@@ -123,7 +123,7 @@ class NewsletterController extends Controller
         $email = Request::getVar("email");
         $code = Request::getVar("code");
         if (! $email or ! $code) {
-            ExceptionResult(get_translation("fill_all_field"), HttpStatusCode::BAD_REQUEST);
+            ExceptionResult(get_translation("fill_all_fields"), HttpStatusCode::BAD_REQUEST);
         }
         $subscriber = new Subscriber();
         $subscriber->loadByEmail($email);
@@ -147,7 +147,7 @@ class NewsletterController extends Controller
         $email = Request::getVar("email");
         $checkbox = new PrivacyCheckbox(getCurrentLanguage(true));
         if (StringHelper::isNullOrWhitespace($email) or ! str_contains("@", $email) or ($checkbox->isEnabled() and ! $checkbox->isChecked())) {
-            ExceptionResult(get_translation("fill_all_field"), HttpStatusCode::BAD_REQUEST);
+            ExceptionResult(get_translation("fill_all_fields"), HttpStatusCode::BAD_REQUEST);
         }
         $subscriber = new Subscriber();
         $subscriber->loadByEmail($email);
@@ -202,7 +202,7 @@ class NewsletterController extends Controller
         $email = Request::getVar("email");
         $code = Request::getVar("code");
         if (! $email or ! $code) {
-            ExceptionResult(get_translation("fill_all_field"), HttpStatusCode::BAD_REQUEST);
+            ExceptionResult(get_translation("fill_all_fields"), HttpStatusCode::BAD_REQUEST);
         }
         $subscriber = new Subscriber();
         $subscriber->loadByEmail($email);
