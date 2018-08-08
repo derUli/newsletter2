@@ -15,3 +15,4 @@
 
 	<p>Sollten Sie diese E-Mail ungewünscht empfangen haben, ignorieren Sie diese bitte einfach.</p>
 </body>
+</html>
