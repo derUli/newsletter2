@@ -2,7 +2,6 @@
 namespace Newsletter;
 
 use Model;
-use NotImplementedException;
 use Database;
 
 class Subscriber extends Model

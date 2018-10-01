@@ -1,8 +1,15 @@
 {
-   "id" : "newsletter2",
-   "version" : "1.1",
-   "description" : "Advanced Newsletter solution for UliCMS",
-   "categories" : ["newsletter", "email", "marketing", "toools"],
-   "compatible_from" : "2018.3.3",
-   "dependencies" : ["absolutify"]
+	"id": "newsletter2",
+	"version": "1.2",
+	"description": "Advanced Newsletter solution for UliCMS",
+	"categories": [
+		"newsletter",
+		"email",
+		"marketing",
+		"toools"
+	],
+	"compatible_from": "2019.1",
+	"dependencies": [
+		"absolutify"
+	]
 }
