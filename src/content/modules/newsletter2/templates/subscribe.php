@@ -26,5 +26,7 @@ if ($checkbox->isEnabled()) {
 ?>
 	<?php csrf_token_html();?>
 
-<button type="submit" class="btn btn-primary"><?php translate("subscribe_newsletter");?></button>
+<button type="submit" class="btn btn-primary">
+<?php echo UliCMS\HTML\icon("fas fa-at");?>  
+<?php translate("subscribe_newsletter");?></button>
 <?php echo ModuleHelper::endForm();?>

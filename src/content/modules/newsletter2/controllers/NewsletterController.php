@@ -243,6 +243,9 @@ class NewsletterController extends Controller
     {
         $action = Request::getVar("action");
         $subscribers = Request::getVar("subscribers");
+		if(!is_array($subscribers)){
+			Request::redirect(ModuleHelper::buildActionURL("newsletter_subscribers"));
+		}
         foreach ($subscribers as $subscriber) {
             $subscriber = new Subscriber($subscriber);
             switch ($action) {

@@ -12,7 +12,8 @@ $user->loadById(get_user_id());
 		<?php }?>
 <div class="form-group">
 	<a href="<?php echo ModuleHelper::buildAdminURL("newsletter2");?>"
-		class="btn btn-default btn-back"><?php translate("back");?></a>
+		class="btn btn-default btn-back"><?php echo UliCMS\HTML\icon("fa fa-arrow-left");?> 
+		<?php translate("back");?></a>
 </div>
 <?php echo ModuleHelper::buildMethodCallForm("NewsletterController", "saveTemplate");?>
   <div class="form-group">
@@ -23,6 +24,8 @@ $user->loadById(get_user_id());
       <label for="body"><?php translate("template")?></label>
       <textarea class="<?php esc($user->getHTMLEditor()); ?>" data-mimetype="text/html" name="newsletter_template_content" id="newsletter_template_content"><?php esc(Settings::get("newsletter_template_content"));?></textarea>
       </div>
-      <button type="submit" class="btn btn-primary"><?php translate("save")?></button>
+      <button type="submit" class="btn btn-primary">
+		<?php echo UliCMS\HTML\icon("fa fa-save");?> 
+		<?php translate("save")?></button>
 <?php echo ModuleHelper::endForm();?>
 

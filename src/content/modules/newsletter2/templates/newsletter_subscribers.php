@@ -37,11 +37,13 @@ if (StringHelper::isNullOrWhitespace($subscribers_filter_email)) {
 <h1><?php translate("subscribers")?></h1>
 <div class="form-group">
 	<a href="<?php echo ModuleHelper::buildAdminURL("newsletter2");?>"
-		class="btn btn-default btn-back"><?php translate("back");?></a> 
+		class="btn btn-default btn-back"><?php echo UliCMS\HTML\icon("fa fa-arrow-left");?> 
+		<?php translate("back");?></a> 
 		<?php if($acl->hasPermission("newsletter_subscribers_add")){?>
 		<a
 		href="<?php echo ModuleHelper::buildActionURL("newsletter_subscribers_add");?>"
-		class="btn btn-primary pull-right"><?php translate("add");?></a>
+		class="btn btn-primary pull-right"><?php echo UliCMS\HTML\icon("fa fa-plus");?> 
+		<?php translate("add");?></a>
 		<?php }?>
 </div>
 
@@ -65,31 +67,21 @@ if (StringHelper::isNullOrWhitespace($subscribers_filter_email)) {
 </div>
 
 <div class="form-group">
-	<button type="submit" class="btn btn-default"><?php translate("search");?></button>
+	<button type="submit" class="btn btn-default">
+	<?php echo UliCMS\HTML\icon("fa fa-search");?> 
+<?php translate("search");?></button>
 </div>
 <?php echo ModuleHelper::endForm();?>
 
 <?php echo ModuleHelper::buildMethodCallForm("NewsletterController", "subscriberAction");?>
-<?php if($acl->hasPermission("newsletter_subscribers_change")){?>
-<div class="row">
-	<div class="col-xs-8">
-		<select name="action">
-			<option selected><?php translate("please_select");?></option>
-			<option value="confirm"><?php translate("confirm");?></option>
-			<option value="delete"><?php translate("delete");?></option>
-		</select>
-	</div>
-	<div class="col-xs-4 text-right">
-		<button type="submit" class="btn btn-default"><?php translate("do_action");?></button>
-	</div>
-</div>
-<?php }?>
 <div class="scroll">
 	<table class="tablesorter">
 		<thead>
 			<tr>
-				<?php if($acl->hasPermission("newsletter_subscribers_change")){?><td
-					style="width: 30px;"><input type="checkbox" class="checkbox"
+				<?php if($acl->hasPermission("newsletter_subscribers_change")){?>
+				<td
+					style="width: 30px;"
+					class="nosort"><input type="checkbox" class="checkbox"
 					id="check-all" value="1"></td>
 					<?php }?>
 				<th><?php translate("email");?></th>
@@ -99,9 +91,14 @@ if (StringHelper::isNullOrWhitespace($subscribers_filter_email)) {
 		</thead>
 		<tbody>
 	<?php foreach($subscribers as $subscriber){?>
-	<tr><?php if($acl->hasPermission("newsletter_subscribers_change")){?>
-				<td><input type="checkbox" class="subscriber-checkbox checkbox"
-					name="subscribers[]" value="<?php echo $subscriber->getID();?>"></td>
+	<tr>
+	<?php if($acl->hasPermission("newsletter_subscribers_change")){?>
+				<td>
+				<input type="checkbox"
+				class="subscriber-checkbox checkbox"
+					name="subscribers[]"
+					value="<?php echo $subscriber->getID();?>">
+					</td>
 					<?php }?>
 				<td><?php esc($subscriber->getEmail());?></td>
 				<td><?php esc(strftime("%Y-%m-%d %H:%M:%S", $subscriber->getSubscribeDate()));?></td>
@@ -111,6 +108,24 @@ if (StringHelper::isNullOrWhitespace($subscribers_filter_email)) {
 		</tbody>
 	</table>
 </div>
+
+<?php if($acl->hasPermission("newsletter_subscribers_change")){?>
+<div class="row voffset1>"
+	<div class="col-xs-8">
+		<select name="action">
+			<option selected><?php translate("please_select");?></option>
+			<option value="confirm"><?php translate("confirm");?></option>
+			<option value="delete"><?php translate("delete");?></option>
+		</select>
+	</div>
+	<div class="col-xs-4 text-right">
+		<button type="submit" class="btn btn-default">
+		<?php echo UliCMS\HTML\icon("fas fa-running");?> 
+		<?php translate("do_action");?>
+</button>
+	</div>
+</div>
+<?php }?>
 <?php echo ModuleHelper::endForm();?>
 
 <?php

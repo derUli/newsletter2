@@ -16,7 +16,7 @@ $content = isset($_SESSION["newsletter_content"]) ? $_SESSION["newsletter_conten
 <h1><?php translate("write_newsletter");?></h1>
 <div class="form-group">
 	<a href="<?php echo ModuleHelper::buildAdminURL("newsletter2");?>"
-		class="btn btn-default btn-back"><?php translate("back");?></a>
+		class="btn btn-default btn-back"><?php echo UliCMS\HTML\icon("fa fa-arrow-left");?> <?php translate("back");?></a>
 </div>
 <?php echo ModuleHelper::buildMethodCallForm("NewsletterController", "sendNewsletter");?>
 <div class="form-group">
@@ -38,5 +38,7 @@ $content = isset($_SESSION["newsletter_content"]) ? $_SESSION["newsletter_conten
 	</select>
 </div>
 
-<button type="submit" class="btn btn-primary"><?php translate("send_newsletter")?></button>
+<button type="submit" class="btn btn-primary">
+<?php echo UliCMS\HTML\icon("fas fa-mail-bulk");?>  
+<?php translate("send_newsletter")?></button>
 <?php echo ModuleHelper::endForm();?>
