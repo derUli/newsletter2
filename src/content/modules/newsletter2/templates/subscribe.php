@@ -3,30 +3,29 @@ echo ModuleHelper::buildMethodCallForm("NewsletterController", "subscribe", [], 
     "class" => "newsletter-form"
 ]);
 ?>
-<?php if(Request::getVar("message")){?>
-<div class="alert alert-success">
-<?php translate(Request::getVar("message"));?>
-</div>
-<?php }?>
+<?php if (Request::getVar("message")) { ?>
+    <div class="alert alert-success">
+        <?php translate(Request::getVar("message")); ?>
+    </div>
+<?php } ?>
 
 <div class="form-group">
-	<label for="email"><?php translate("your_email_address")?></label> <input
-		type="email" required class="form-control" name="email" id="email">
+    <label for="email"><?php translate("your_email_address") ?></label> <input
+        type="email" required class="form-control" name="email" id="email">
 </div>
-<?php $checkbox = new PrivacyCheckbox(getCurrentLanguage(true));?>
+<?php $checkbox = new PrivacyCheckbox(getCurrentLanguage(true)); ?>
 <?php
-
 if ($checkbox->isEnabled()) {
     ?>
-<div class="privacy-checkbox">
-	<?php
-    echo $checkbox->render();
-    ?></div><?php
+    <div class="privacy-checkbox">
+        <?php
+        echo $checkbox->render();
+        ?></div><?php
 }
 ?>
-	<?php csrf_token_html();?>
+<?php csrf_token_html(); ?>
 
 <button type="submit" class="btn btn-primary">
-<?php echo UliCMS\HTML\icon("fas fa-at");?>  
-<?php translate("subscribe_newsletter");?></button>
-<?php echo ModuleHelper::endForm();?>
+    <?php echo UliCMS\HTML\icon("fas fa-at"); ?>  
+    <?php translate("subscribe_newsletter"); ?></button>
+<?php echo ModuleHelper::endForm(); ?>

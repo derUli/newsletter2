@@ -1,4 +1,5 @@
 <?php
+
 add_translation("newsletter", "Newsletter");
 add_translation("your_email_address", "Ihre E-Mail Adresse:");
 add_translation("subscribe_newsletter", "Newsletter abonnieren");
