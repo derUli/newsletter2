@@ -110,20 +110,20 @@ if (StringHelper::isNullOrWhitespace($subscribers_filter_email)) {
 </div>
 
 <?php if ($acl->hasPermission("newsletter_subscribers_change")) { ?>
-    <div class="row voffset1>"
-         <div class="col-xs-8">
-        <select name="action">
-            <option selected><?php translate("please_select"); ?></option>
-            <option value="confirm"><?php translate("confirm"); ?></option>
-            <option value="delete"><?php translate("delete"); ?></option>
-        </select>
-    </div>
-    <div class="col-xs-4 text-right">
-        <button type="submit" class="btn btn-default">
-            <?php echo UliCMS\HTML\icon("fas fa-running"); ?> 
-            <?php translate("do_action"); ?>
-        </button>
-    </div>
+    <div class="row voffset2">
+        <div class="col-xs-8">
+            <select name="action">
+                <option selected><?php translate("please_select"); ?></option>
+                <option value="confirm"><?php translate("confirm"); ?></option>
+                <option value="delete"><?php translate("delete"); ?></option>
+            </select>
+        </div>
+        <div class="col-xs-4 text-right">
+            <button type="submit" class="btn btn-default">
+                <?php echo UliCMS\HTML\icon("fas fa-running"); ?> 
+                <?php translate("do_action"); ?>
+            </button>
+        </div>
     </div>
 <?php } ?>
 <?php echo ModuleHelper::endForm(); ?>
