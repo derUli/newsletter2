@@ -55,13 +55,13 @@ class NewsletterController extends Controller {
             $date = date(Settings::get("date_format"));
 
             $title = str_ireplace("%newsletter_id%", Settings::get("newsletter_id"), $title);
-            $title = str_ireplace("%year%", strftime("%Y"), $title);
-            $title = str_ireplace("%month%", utf8_encode(strftime("%B")), $title);
+            $title = str_ireplace("%year%", PHP81_BC\strftime("%Y"), $title);
+            $title = str_ireplace("%month%", utf8_encode(PHP81_BC\strftime("%B")), $title);
             $title = str_ireplace("%date%", $date, $title);
 
             $body = str_ireplace("%newsletter_id%", Settings::get("newsletter_id"), $body);
-            $body = str_ireplace("%year%", strftime("%Y"), $body);
-            $body = str_ireplace("%month%", utf8_encode(strftime("%B")), $body);
+            $body = str_ireplace("%year%", PHP81_BC\strftime("%Y"), $body);
+            $body = str_ireplace("%month%", utf8_encode(PHP81_BC\strftime("%B")), $body);
             $body = str_ireplace("%date%", $date, $body);
             $body = str_ireplace("%title%", $title, $body);
 
