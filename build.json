@@ -1,6 +1,6 @@
 {
 	"id": "newsletter2",
-	"version": "1.4",
+	"version": "1.5",
 	"description": "Advanced Newsletter solution for UliCMS",
 	"categories": [
 		"newsletter",
@@ -8,7 +8,7 @@
 		"marketing",
 		"toools"
 	],
-	"compatible_from": "2020.2.3",
+	"compatible_from": "2022.2",
 	"dependencies": [
 		"absolutify"
 	]

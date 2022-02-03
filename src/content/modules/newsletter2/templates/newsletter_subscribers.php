@@ -101,7 +101,7 @@ if (StringHelper::isNullOrWhitespace($subscribers_filter_email)) {
                         </td>
                     <?php } ?>
                     <td><?php esc($subscriber->getEmail()); ?></td>
-                    <td><?php esc(strftime("%Y-%m-%d %H:%M:%S", $subscriber->getSubscribeDate())); ?></td>
+                    <td><?php esc(PHP81_BC\strftime("%Y-%m-%d %H:%M:%S", $subscriber->getSubscribeDate())); ?></td>
                     <td><?php esc(bool2YesNo($subscriber->getConfirmed())); ?></td>
                 </tr>
             <?php } ?>
